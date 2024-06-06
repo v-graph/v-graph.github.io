@@ -112,7 +112,7 @@
         <h2 class="title is-5">Resources:</h2>
       </div>
       <div class="column is-flex is-align-items-center is-justify-content-space-around">
-        <a href="https://huggingface.co/collections/Yanbin99/gitqa-datasets-65c705c9488606617e246bd3" target="_blank" class="button is-inverted is-outlined" style="color: #3273dc; border-color: #3273dc;">Dataset</a>
+        <a href="https://huggingface.co/collections/Yanbin99/gvlqa-datasets-65c705c9488606617e246bd3" target="_blank" class="button is-inverted is-outlined" style="color: #3273dc; border-color: #3273dc;">Dataset</a>
         <a href="https://github.com/WEIYanbin1999/GIT" target="_blank" class="button is-inverted is-outlined" style="color: #3273dc; border-color: #3273dc;">Code</a>
         <a href="https://huggingface.co/collections/Yanbin99/gita-65cacd0d9b312118de7bbe42" target="_blank" class="button is-inverted is-outlined" style="color: #3273dc; border-color: #3273dc;">Model Weights</a>
       </div>
@@ -134,7 +134,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p> Large Language Models (LLMs) are increasingly used for various tasks with graph structures, such as robotic planning, knowledge graph completion, and common-sense reasoning. Though LLMs can comprehend graph information in a textual format, they overlook the rich visual modality, which is an intuitive way for humans to comprehend structural information and conduct graph reasoning. The potential benefits and capabilities of representing graph structures as visual images (i.e., visual graph) is still unexplored. In this paper, we take the first step in incorporating visual information into graph reasoning tasks and propose a new benchmark <b>GITQA</b>, where each sample is a tuple (graph, image, textual description). We conduct extensive experiments on the GITQA benchmark using state-of-the-art multimodal LLMs. Results on graph reasoning tasks show that combining textual and visual information together performs better than using one modality alone. Moreover, the LLaVA-7B/13B models, once finetuned on the GITQA training set (which we refer to as <b>GITA</b>), achieve higher accuracy than the closed-source model GPT-4(V). We also study the effects of augmentations in graph reasoning.</p>
+          <p>Large Language Models (LLMs) are increasingly used for various tasks with graph structures. Though LLMs can process graph information in a textual format, they overlook the rich vision modality, which is an intuitive way for humans to comprehend structural information and conduct general graph reasoning. The potential benefits and capabilities of representing graph structures as visual images (i.e., visual graph) are still unexplored. To fill the gap, we innovatively propose an end-to-end framework, called Graph to vIsual and Textual IntegrAtion (GITA), which firstly incorporates visual graphs into general graph reasoning. Besides, we establish Graph-based Vision-Language Question Answering (GVLQA) dataset from existing graph data, which is the first vision-language dataset for general graph reasoning purposes. Extensive experiments on the GVLQA dataset and five real-world datasets show that GITA outperforms mainstream LLMs in terms of general graph reasoning capabilities. Moreover, We highlight the effectiveness of the layout augmentation on visual graphs and pretraining on the GVLQA dataset.</p>
         </div>
       </div>
     </div>
@@ -146,11 +146,11 @@
 
 
 
-<!-- An Example Section -->
+<!-- GITA Section -->
 <section class="hero teaser">
     <div class="hero-body">
         <div class="container is-max-desktop">
-            <h2 class="title is-4 has-text-centered">Visual Graph helps LLM on Graph Reasoning</h2>
+            <h2 class="title is-4 has-text-centered">GITA Architecture</h2>
             <center>
             <div class="container is-max-desktop">
             <div class="hero-body">
@@ -164,52 +164,49 @@
     </div>
 </section>
 
-<!-- GITQA Dataset Section -->
+<!-- GVLQA Dataset Section -->
 <section class="hero teaser">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <h2 class="title is-4 has-text-centered">GITQA (Graph-Image-Text Question Answering) Dataset</h2>
             <p class="has-text-centered">
-                Please check out our multimodal graph reasoning dataset, GITQA at <a href="https://huggingface.co/collections/Yanbin99/gitqa-datasets-65c705c9488606617e246bd3" target="_blank">GITQA Hugging Face Collection</a>.
+                Please check out our vision-language graph reasoning dataset, GVLQA at <a href="https://huggingface.co/collections/Yanbin99/gvlqa-datasets-65c705c9488606617e246bd3" target="_blank">GVLQA Hugging Face Collection</a>.
             </p>
             <center>
-            <img src="static/images/benchmark.png" alt="GITQA Benchmark" width="800"/>
+            <img src="static/images/benchmark.png" alt="GVLQA Benchmark" width="800"/>
             </center>
         </div>
     </div>
 </section>
 
-<!-- GITA Section -->
-<section class="hero teaser">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <h2 class="title is-4 has-text-centered">GITA (Graph-Image-Text Assistant) Models</h2>
-            <p class="has-text-centered">
-               Please check out our Model Zoo for all public GITA checkpoints at <a href="https://huggingface.co/collections/Yanbin99/gita-65cacd0d9b312118de7bbe42" target="_blank">Model Checkpoints Hugging Face Collection</a>.
-            </p>
-            <center>
-            <img src="static/images/result1.png" alt="GITA Performance" width="600"/>
-            <figcaption>Figure: Testing accuracy (averaged over eight graph reasoning tasks) of closed-source models GPT-4(V) and open-source models Vicuna/LLaVA.</figcaption>
-            </center>
-        </div>
-    </div>
-</section>
 
-<!-- Modalities Models Illustration Section -->
+<!-- Experiment Results Section -->
 <section class="hero teaser">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <h3 class="title is-4 has-text-centered">Comparisons for Models Using Textual/Visual/Both Modalities</h3>
             <center>
-            <img src="static/images/result2.png" alt="Accuracy for different Modalities" width="800"/>
+            <img src="static/images/result1.png" alt="" width="800"/>
             </center>
             <center>
-            <img src="static/images/comparison.png" alt="Modalities Models Illustration" width="800"/>
+            <img src="static/images/result2.png" alt="" width="800"/>
             </center>
         </div>
     </div>
 </section>
 
+
+<!-- Case Study Section -->
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <h3 class="title is-4 has-text-centered">Comparisons for Models Using Textual/Visual/Both Modalities</h3>
+            <center>
+            <img src="static/images/case.png" alt="" width="800"/>
+            </center>
+        </div>
+    </div>
+</section>
 <!--BibTex citation -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
